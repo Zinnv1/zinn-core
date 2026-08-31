@@ -4056,3 +4056,111 @@ input:focus {
     padding: 24px;
   }
 }
+/* =========================================
+   ZINN CORE — MOBILE HERO FIX
+========================================= */
+
+@media (max-width: 650px) {
+
+  .hero {
+    min-height: auto;
+    padding: 125px 20px 70px;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-status {
+    max-width: 100%;
+    padding: 9px 12px;
+
+    font-size: 9px;
+    letter-spacing: 1px;
+
+    white-space: normal;
+    text-align: center;
+  }
+
+  .hero-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .hero h1 {
+    width: 100%;
+
+    font-size: clamp(43px, 13vw, 58px);
+
+    line-height: 0.92;
+    letter-spacing: -3px;
+
+    margin-bottom: 28px;
+  }
+
+  .hero h1 span {
+    font-size: 0.76em;
+
+    letter-spacing: -2px;
+
+    white-space: nowrap;
+  }
+
+  .hero-description {
+    width: 100%;
+    max-width: 360px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    padding: 0 4px;
+  }
+
+  .hero-actions {
+    width: 100%;
+    gap: 12px;
+    margin-bottom: 50px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    min-height: 58px;
+  }
+
+  .hero-data {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 0;
+
+    margin-top: 15px;
+  }
+
+  .hero-data div {
+    padding: 0 8px;
+
+    border-left: 1px solid #252525;
+  }
+
+  .hero-data p {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .core-area {
+    display: none;
+  }
+
+  .hero-bottom {
+    display: none;
+  }
+}
