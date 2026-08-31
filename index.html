@@ -16,6 +16,178 @@
 
   <link rel="stylesheet" href="style.css" />
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    #how,
+    #about {
+      scroll-margin-top: 90px;
+    }
+
+    .core-info-section {
+      position: relative;
+      padding: 110px 7vw;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(84, 91, 255, .10), transparent 34%),
+        linear-gradient(180deg, #07080b 0%, #0a0b10 100%);
+      border-top: 1px solid rgba(255, 255, 255, .06);
+      overflow: hidden;
+    }
+
+    .core-info-section + .core-info-section {
+      border-top: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .core-info-wrap {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .core-info-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+      color: #8d93ff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .core-info-kicker::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: currentColor;
+      opacity: .8;
+    }
+
+    .core-info-section h2 {
+      margin: 0;
+      max-width: 760px;
+      color: #fff;
+      font-size: clamp(38px, 6vw, 76px);
+      line-height: .98;
+      letter-spacing: -.04em;
+    }
+
+    .core-info-section h2 span {
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(130, 137, 255, .95);
+    }
+
+    .core-info-intro {
+      max-width: 760px;
+      margin: 26px 0 0;
+      color: rgba(255, 255, 255, .62);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 50px;
+    }
+
+    .how-card,
+    .about-panel {
+      border: 1px solid rgba(255, 255, 255, .08);
+      background: rgba(255, 255, 255, .025);
+      backdrop-filter: blur(10px);
+    }
+
+    .how-card {
+      min-height: 250px;
+      padding: 30px;
+    }
+
+    .how-card .how-number {
+      display: block;
+      margin-bottom: 54px;
+      color: #747bff;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .18em;
+    }
+
+    .how-card h3 {
+      margin: 0 0 14px;
+      color: #fff;
+      font-size: 18px;
+      letter-spacing: -.02em;
+    }
+
+    .how-card p,
+    .about-panel p {
+      margin: 0;
+      color: rgba(255, 255, 255, .56);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 42px;
+      align-items: end;
+      margin-top: 46px;
+    }
+
+    .about-panel {
+      padding: 30px;
+    }
+
+    .about-data {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .about-data div {
+      padding: 24px;
+      background: #0a0b10;
+    }
+
+    .about-data span {
+      display: block;
+      margin-bottom: 8px;
+      color: rgba(255, 255, 255, .38);
+      font-size: 10px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .about-data strong {
+      color: #fff;
+      font-size: 14px;
+    }
+
+    @media (max-width: 820px) {
+      .core-info-section {
+        padding: 80px 24px;
+      }
+
+      .how-grid,
+      .about-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .how-card .how-number {
+        margin-bottom: 28px;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -174,6 +346,98 @@
       </div>
 
     </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="core-info-section" id="how">
+      <div class="core-info-wrap">
+        <span class="core-info-kicker">ZINN CORE / PROCESS</span>
+
+        <h2>
+          COMO
+          <span>FUNCIONA.</span>
+        </h2>
+
+        <p class="core-info-intro">
+          O ZINN CORE transforma os sinais digitais da sua marca em um diagnóstico
+          objetivo. Em poucos passos, a inteligência analisa os dados informados,
+          calcula o CORE SCORE e organiza os principais pontos de força, atenção
+          e oportunidade.
+        </p>
+
+        <div class="how-grid">
+          <article class="how-card">
+            <span class="how-number">01 / IDENTIFY</span>
+            <h3>IDENTIFICAMOS A MARCA</h3>
+            <p>
+              Você informa os dados principais da empresa, como nome, Instagram,
+              segmento, cidade e, se tiver, o site.
+            </p>
+          </article>
+
+          <article class="how-card">
+            <span class="how-number">02 / ANALYZE</span>
+            <h3>O CORE ANALISA</h3>
+            <p>
+              A inteligência interpreta os sinais digitais e avalia presença,
+              posicionamento, autoridade, conversão e experiência digital.
+            </p>
+          </article>
+
+          <article class="how-card">
+            <span class="how-number">03 / REPORT</span>
+            <h3>VOCÊ RECEBE O DIAGNÓSTICO</h3>
+            <p>
+              O sistema gera um CORE SCORE, insights, pontos de atenção,
+              oportunidades e um plano de ação que pode ser compartilhado por link.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="core-info-section" id="about">
+      <div class="core-info-wrap">
+        <span class="core-info-kicker">ZINN CORE / ABOUT</span>
+
+        <h2>
+          INTELIGÊNCIA PARA
+          <span>DECODIFICAR MARCAS.</span>
+        </h2>
+
+        <div class="about-layout">
+          <div class="about-panel">
+            <p>
+              O ZINN CORE é uma ferramenta de diagnóstico digital criada para
+              transformar informações da presença online de uma marca em uma leitura
+              mais clara e estratégica. O objetivo é mostrar onde a empresa está bem,
+              onde perde força e quais oportunidades podem ser aproveitadas para
+              melhorar sua presença digital e sua capacidade de gerar contatos.
+            </p>
+          </div>
+
+          <div class="about-data">
+            <div>
+              <span>ENGINE</span>
+              <strong>CORE AI</strong>
+            </div>
+            <div>
+              <span>OUTPUT</span>
+              <strong>DIGITAL REPORT</strong>
+            </div>
+            <div>
+              <span>FOCUS</span>
+              <strong>BRAND INTELLIGENCE</strong>
+            </div>
+            <div>
+              <span>BY</span>
+              <strong>ZINN STUDIO</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 <section class="core-scan-section" id="analysis">
 
   <div class="scan-grid-bg"></div>
