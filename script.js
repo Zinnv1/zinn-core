@@ -692,6 +692,7 @@ data.report_id
 openSharedCoreReport(
 data
 );
+updateZinnStudioWhatsApp();
 
 } catch (error) {
 
@@ -1687,15 +1688,19 @@ roadmap:
 currentAnalysis.roadmap
 
 };
-
 renderCoreReport(
-dynamicReportData
+  dynamicReportData
 );
+
+updateZinnStudioWhatsApp();
+
+}
+
 
 }
 
 stageFour.animate(
-[
+
 {
 opacity: 0,
 transform:
@@ -2335,3 +2340,35 @@ loadSharedCoreReport();
 
 }
 );
+/* =========================================
+ZINN CORE — SMART WHATSAPP CTA
+========================================= */
+
+function updateZinnStudioWhatsApp() {
+
+  const zinnStudioButton =
+    document.querySelector(
+      ".solution-primary"
+    );
+
+  if (!zinnStudioButton) return;
+
+  const brandName =
+    currentBrandData.brandName ||
+    "minha marca";
+
+  const message =
+    `Olá! Fiz a análise da ${brandName} pelo ZINN CORE e gostaria de conversar sobre os pontos identificados no meu diagnóstico.`;
+
+  const whatsappUrl =
+    `https://wa.me/5531995931311?text=${encodeURIComponent(message)}`;
+
+  zinnStudioButton.href =
+    whatsappUrl;
+
+  zinnStudioButton.target =
+    "_blank";
+
+  zinnStudioButton.rel =
+    "noopener noreferrer";
+}
