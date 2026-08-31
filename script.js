@@ -869,6 +869,7 @@ coreScanForm.addEventListener(
 (event) => {
 
 event.preventDefault();
+console.log("CORE SCAN SUBMIT FUNCIONOU");
 
 const brandName =
 document
@@ -1696,32 +1697,27 @@ updateZinnStudioWhatsApp();
 
 
 }
-
 stageFour.animate(
-
-{
-opacity: 0,
-transform:
-"translateY(30px)"
-},
-{
-opacity: 1,
-transform:
-"translateY(0)"
-}
-],
-{
-duration: 800,
-easing:
-"ease",
-fill:
-"forwards"
-}
+  [
+    {
+      opacity: 0,
+      transform: "translateY(30px)"
+    },
+    {
+      opacity: 1,
+      transform: "translateY(0)"
+    }
+  ],
+  {
+    duration: 800,
+    easing: "ease",
+    fill: "forwards"
+  }
 );
 
 const analysisSection =
 document.querySelector(
-"#analysis"
+  "#analysis"
 );
 
 if (analysisSection) {
